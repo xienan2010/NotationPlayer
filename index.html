@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五线谱识谱练习 - Music Notation Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- VexFlow CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow/releases/vexflow-debug.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>五线谱识谱练习</h1>
+            <div class="stats-panel">
+                <div class="stat-item">
+                    <span class="label">正确</span>
+                    <span id="correct-count" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">错误</span>
+                    <span id="wrong-count" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">准确率</span>
+                    <span id="accuracy" class="value">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="notation-container">
+                <div id="output"></div>
+            </div>
+
+            <div class="feedback-indicator" id="feedback-indicator">
+                <!-- Correct/Wrong indicator will appear here -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="controls">
+                <div class="control-group">
+                    <label>谱号</label>
+                    <select id="clef-select">
+                        <option value="treble">高音谱号 (Treble)</option>
+                        <option value="bass">低音谱号 (Bass)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>键盘映射</label>
+                    <select id="mapping-select">
+                        <option value="scheme-a">方案 A (C,D,E...)</option>
+                        <option value="scheme-b">方案 B (钢琴布局)</option>
+                    </select>
+                </div>
+                <div class="midi-status" id="midi-status">
+                    MIDI 未连接
+                </div>
+            </div>
+
+            <div class="help-text" id="help-text">
+                方案 A: 按 A-G 键对应音名 | 方案 B: A S D F G H J 对应 C D E F G A B
+            </div>
+        </footer>
+    </div>
+
+    <script src="audio.js"></script>
+    <script src="notation.js"></script>
+    <script src="input.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
