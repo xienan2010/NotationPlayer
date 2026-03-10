@@ -65,7 +65,7 @@ class App {
         setTimeout(() => {
             this.currentNote = this.notation.drawRandomNote();
             this.feedbackEl.className = 'feedback-indicator';
-        }, 500);
+        }, 50);
     }
 
     onWrong(midi) {
