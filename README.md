@@ -15,8 +15,10 @@
 
 ## 如何运行
 
-1. 下载或克隆本项目。
-2. 在浏览器中打开 `index.html` 即可开始使用。
+- **在线试用**：[NotationPlayer 在线版](https://notationplayer.onrender.com/)
+- **本地运行**：
+  1. 下载或克隆本项目。
+  2. 在浏览器中打开 `index.html` 即可开始使用。
 
 ## 技术栈
 
